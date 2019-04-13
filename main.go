@@ -16,7 +16,7 @@ func init() {
 	var err error
 
 	cluster := gocql.NewCluster("127.0.0.1")
-	cluster.Keyspace = "code2succeed"
+	cluster.Keyspace = "go-cassandra"
 	Session, err = cluster.CreateSession()
 	if err != nil {
 		panic(err)
