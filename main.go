@@ -21,6 +21,7 @@ func Connect() error {
 		Session = nil
 	}
 
+	//cluster := gocql.NewCluster("_portname._tcp.cassandra-headless-svc.default.svc.cluster.local")
 	cluster := gocql.NewCluster("127.0.0.1")
 	cluster.Keyspace = "code2succeed"
 	Session, err = cluster.CreateSession()
